@@ -1,0 +1,24 @@
+{
+    "variants": {
+        "check_decay=false,decayable=true,variant=iron":  { "model": "treeores:iron_leaf"},
+        "check_decay=false,decayable=false,variant=iron":   { "model": "treeores:iron_leaf"},
+        "check_decay=true,decayable=true,variant=iron":   { "model": "treeores:iron_leaf"},
+        "check_decay=true,decayable=false,variant=iron":   { "model": "treeores:iron_leaf"},
+        
+        "check_decay=false,decayable=true,variant=gold":  { "model": "treeores:gold_leaf"},
+        "check_decay=false,decayable=false,variant=gold":   { "model": "treeores:gold_leaf"},
+        "check_decay=true,decayable=true,variant=gold":   { "model": "treeores:gold_leaf"},
+        "check_decay=true,decayable=false,variant=gold":   { "model": "treeores:gold_leaf"},
+       
+        "check_decay=false,decayable=true,variant=coal":  { "model": "treeores:coal_leaf"},
+        "check_decay=false,decayable=false,variant=coal":   { "model": "treeores:coal_leaf"},
+        "check_decay=true,decayable=true,variant=coal":   { "model": "treeores:coal_leaf"},
+        "check_decay=true,decayable=false,variant=coal":   { "model": "treeores:coal_leaf"},
+       
+        "check_decay=false,decayable=true,variant=redstone":  { "model": "treeores:redstone_leaf"},
+        "check_decay=false,decayable=false,variant=redstone":   { "model": "treeores:redstone_leaf"},
+        "check_decay=true,decayable=true,variant=redstone":   { "model": "treeores:redstone_leaf"},
+        "check_decay=true,decayable=false,variant=redstone":   { "model": "treeores:redstone_leaf"}
+
+    }
+}

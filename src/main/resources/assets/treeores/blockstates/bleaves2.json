@@ -1,0 +1,24 @@
+{
+    "variants": {
+        "check_decay=false,decayable=true,variant=diamond":  { "model": "treeores:diamond_leaf"},
+        "check_decay=false,decayable=false,variant=diamond":   { "model": "treeores:diamond_leaf"},
+        "check_decay=true,decayable=true,variant=diamond":   { "model": "treeores:diamond_leaf"},
+        "check_decay=true,decayable=false,variant=diamond":   { "model": "treeores:diamond_leaf"},
+        
+        "check_decay=false,decayable=true,variant=emerald":  { "model": "treeores:emerald_leaf"},
+        "check_decay=false,decayable=false,variant=emerald":   { "model": "treeores:emerald_leaf"},
+        "check_decay=true,decayable=true,variant=emerald":   { "model": "treeores:emerald_leaf"},
+        "check_decay=true,decayable=false,variant=emerald":   { "model": "treeores:emerald_leaf"},
+       
+        "check_decay=false,decayable=true,variant=lapis":  { "model": "treeores:lapis_leaf"},
+        "check_decay=false,decayable=false,variant=lapis":   { "model": "treeores:lapis_leaf"},
+        "check_decay=true,decayable=true,variant=lapis":   { "model": "treeores:lapis_leaf"},
+        "check_decay=true,decayable=false,variant=lapis":   { "model": "treeores:lapis_leaf"},
+       
+        "check_decay=false,decayable=true,variant=obsidian":  { "model": "treeores:obsidian_leaf"},
+        "check_decay=false,decayable=false,variant=obsidian":   { "model": "treeores:obsidian_leaf"},
+        "check_decay=true,decayable=true,variant=obsidian":   { "model": "treeores:obsidian_leaf"},
+        "check_decay=true,decayable=false,variant=obsidian":   { "model": "treeores:obsidian_leaf"}
+
+    }
+}

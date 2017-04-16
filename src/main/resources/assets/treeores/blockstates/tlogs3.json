@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "axis=y,variant=glowstone":  { "model": "treeores:glowstone_log" },
+        "axis=z,variant=glowstone":   { "model": "treeores:glowstone_log_side" },
+        "axis=x,variant=glowstone":   { "model": "treeores:glowstone_log_side", "y": 90 },
+        "axis=none,variant=glowstone":   { "model": "treeores:glowstone_log"},
+        "axis=y,variant=quartz":  { "model": "treeores:quartz_log" },
+        "axis=z,variant=quartz":   { "model": "treeores:quartz_log_side" },
+        "axis=x,variant=quartz":   { "model": "treeores:quartz_log_side", "y": 90 },
+        "axis=none,variant=quartz":   { "model": "treeores:quartz_log"},
+        "axis=y,variant=xp":   { "model": "treeores:xp_log" },
+        "axis=z,variant=xp":   { "model": "treeores:xp_log_side"},
+        "axis=x,variant=xp":   { "model": "treeores:xp_log_side", "y": 90 },
+        "axis=none,variant=xp":   { "model": "treeores:xp_log"}
+    }
+}

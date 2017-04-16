@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "axis=y,variant=diamond":  { "model": "treeores:diamond_log" },
+        "axis=z,variant=diamond":   { "model": "treeores:diamond_log_side" },
+        "axis=x,variant=diamond":   { "model": "treeores:diamond_log_side", "y": 90 },
+        "axis=none,variant=diamond":   { "model": "treeores:diamond_log"},
+        "axis=y,variant=emerald":  { "model": "treeores:emerald_log" },
+        "axis=z,variant=emerald":   { "model": "treeores:emerald_log_side" },
+        "axis=x,variant=emerald":   { "model": "treeores:emerald_log_side", "y": 90 },
+        "axis=none,variant=emerald":   { "model": "treeores:emerald_log"},
+        "axis=y,variant=obsidian":   { "model": "treeores:obsidian_log" },
+        "axis=z,variant=obsidian":   { "model": "treeores:obsidian_log_side"},
+        "axis=x,variant=obsidian":   { "model": "treeores:obsidian_log_side", "y": 90 },
+        "axis=none,variant=obsidian":   { "model": "treeores:obsidian_log"},
+        "axis=y,variant=lapis":   { "model": "treeores:lapis_log"},
+        "axis=z,variant=lapis":   { "model": "treeores:lapis_log_side"},
+        "axis=x,variant=lapis":   { "model": "treeores:lapis_log_side", "y": 90 },
+        "axis=none,variant=lapis":   { "model": "treeores:lapis_log"}
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "stage=0,type=iron":  { "model": "treeores:iron_sapling" },
+        "stage=1,type=iron":  { "model": "treeores:iron_sapling" },
+
+        "stage=0,type=gold":  { "model": "treeores:gold_sapling" },
+        "stage=1,type=gold":  { "model": "treeores:gold_sapling" },
+
+        "stage=0,type=coal":  { "model": "treeores:coal_sapling" },
+        "stage=1,type=coal":  { "model": "treeores:coal_sapling" },
+
+        "stage=0,type=redstone": { "model": "treeores:redstone_sapling" },
+        "stage=1,type=redstone": { "model": "treeores:redstone_sapling" }
+    }
+}

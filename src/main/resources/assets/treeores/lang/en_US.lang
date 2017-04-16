@@ -1,0 +1,103 @@
+iron_log.name=Iron Tree Log
+gold_log.name=Gold Tree Log
+coal_log.name=Coal Tree Log
+redstone_log.name=Redstone Tree Log
+emerald_log.name=Emerald Tree Log
+diamond_log.name=Diamond Tree Log
+lapis_log.name=Lapis Tree Log
+obsidian_log.name=Obsidian Tree Log
+xp_log.name=Xp Tree Log
+glowstone_log.name=Glowstone Tree Log
+quartz_log.name=Quartz Tree Log
+
+iron_leaf.name=Iron Tree Leaf
+gold_leaf.name=Gold Tree Leaf
+coal_leaf.name=Coal Tree Leaf
+redstone_leaf.name=Redstone Tree Leaf
+emerald_leaf.name=Emerald Tree Leaf
+diamond_leaf.name=Diamond Tree Leaf
+lapis_leaf.name=Lapis Tree Leaf
+obsidian_leaf.name=Obsidian Tree Leaf
+xp_leaf.name=Xp Tree Leaf
+glowstone_leaf.name=Glowstone Tree Leaf
+quartz_leaf.name=Quartz Tree Leaf
+iron_boss_leaf.name=Iron Tree Boss Leaf
+gold_boss_leaf.name=Gold Tree Boss Leaf
+coal_boss_leaf.name=Coal Tree Boss Leaf
+redstone_boss_leaf.name=Redstone Tree Boss Leaf
+emerald_boss_leaf.name=Emerald Tree Boss Leaf
+diamond_boss_leaf.name=Diamond Tree Boss Leaf
+lapis_boss_leaf.name=Lapis Tree Boss Leaf
+obsidian_boss_leaf.name=Obsidian Tree Boss Leaf
+xp_boss_leaf.name=Xp Tree Boss Leaf
+glowstone_boss_leaf.name=Glowstone Tree Boss Leaf
+quartz_boss_leaf.name=Quartz Tree Boss Leaf
+
+iron_sapling.name=Iron Tree Sapling
+gold_sapling.name=Gold Tree Sapling
+coal_sapling.name=Coal Tree Sapling
+redstone_sapling.name=Redstone Tree Sapling
+emerald_sapling.name=Emerald Tree Sapling
+diamond_sapling.name=Diamond Tree Sapling
+lapis_sapling.name=Lapis Tree Sapling
+obsidian_sapling.name=Obsidian Tree Sapling
+xp_sapling.name=Xp Tree Sapling
+glowstone_sapling.name=Glowstone Tree Sapling
+quartz_sapling.name=Quartz Tree Sapling
+iron_boss_sapling.name=Iron Tree Boss Sapling
+gold_boss_sapling.name=Gold Tree Boss Sapling
+coal_boss_sapling.name=Coal Tree Boss Sapling
+redstone_boss_sapling.name=Redstone Tree Boss Sapling
+emerald_boss_sapling.name=Emerald Tree Boss Sapling
+diamond_boss_sapling.name=Diamond Tree Boss Sapling
+lapis_boss_sapling.name=Lapis Tree Boss Sapling
+obsidian_boss_sapling.name=Obsidian Tree Boss Sapling
+xp_boss_sapling.name=Xp Tree Boss Sapling
+glowstone_boss_sapling.name=Glowstone Tree Boss Sapling
+quartz_boss_sapling.name=Quartz Tree Boss Sapling
+
+item.transformers_normal.name=Normal Transformer
+item.transformers_nether.name=Nether Transformer
+item.transformers_reinforced.name=Reinforced Transformer
+
+item.bossspawners1_iron.name=Iron Boss Spawner
+item.bossspawners1_gold.name=Gold Boss Spawner
+item.bossspawners1_coal.name=Coal Boss Spawner
+item.bossspawners1_redstone.name=Redstone Boss Spawner
+item.bossspawners2_emerald.name=Emerald Boss Spawner
+item.bossspawners2_diamond.name=Diamond Boss Spawner
+item.bossspawners2_lapis.name=Lapis Boss Spawner
+item.bossspawners2_obsidian.name=Obsidian Boss Spawner
+item.bossspawners3_xp.name=Xp Boss Spawner
+item.bossspawners3_glowstone.name=Glowstone Boss Spawner
+item.bossspawners3_quartz.name=Quartz Boss Spawner
+item.bossspawnerparts_broken.name=Broken Spawner Frame
+item.bossspawnerparts_final.name=Spawner Frame
+
+item.treechops1_iron.name=Iron Log Chop
+item.treechops1_gold.name=Gold Log Chop
+item.treechops1_coal.name=Coal Log Chop
+item.treechops1_redstone.name=Redstone Log Chop
+item.treechops2_emerald.name=Emerald Log Chop
+item.treechops2_diamond.name=Diamond Log Chop
+item.treechops2_lapis.name=Lapis Log Chop
+item.treechops2_obsidian.name=Obsidian Log Chop
+item.treechops3_xp.name=Xp Log Chop
+item.treechops3_glowstone.name=Glowstone Log Chop
+item.treechops3_quartz.name=Quartz Log Chop
+
+entity.treeores.IronTreeBoss.name=Iron Tree Boss
+entity.treeores.GoldTreeBoss.name=Gold Tree Boss
+entity.treeores.CoalTreeBoss.name=Coal Tree Boss
+entity.treeores.RedstoneTreeBoss.name=Redstone Tree Boss
+entity.treeores.EmeraldTreeBoss.name=Emerald Tree Boss
+entity.treeores.DiamondTreeBoss.name=Diamond Tree Boss
+entity.treeores.LapisTreeBoss.name=Lapis Tree Boss
+entity.treeores.ObsidianTreeBoss.name=Obsidian Tree Boss
+entity.treeores.XpTreeBoss.name=Xp Tree Boss
+entity.treeores.GlowstoneTreeBoss.name=Glowstone Tree Boss
+entity.treeores.QuartzTreeBoss.name=Quartz Tree Boss
+
+itemGroup.treeOresTab=TreeOres Tab
+
+

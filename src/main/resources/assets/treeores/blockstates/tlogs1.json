@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "axis=y,variant=iron":  { "model": "treeores:iron_log" },
+        "axis=z,variant=iron":   { "model": "treeores:iron_log_side" },
+        "axis=x,variant=iron":   { "model": "treeores:iron_log_side", "y": 90 },
+        "axis=none,variant=iron":   { "model": "treeores:iron_log"},
+        "axis=none,variant=iron":   { "model": "treeores:iron_log"},
+        "axis=y,variant=gold":  { "model": "treeores:gold_log" },
+        "axis=z,variant=gold":   { "model": "treeores:gold_log_side" },
+        "axis=x,variant=gold":   { "model": "treeores:gold_log_side", "y": 90 },
+        "axis=none,variant=gold":   { "model": "treeores:gold_log"},
+        "axis=y,variant=redstone":   { "model": "treeores:redstone_log" },
+        "axis=z,variant=redstone":   { "model": "treeores:redstone_log_side"},
+        "axis=x,variant=redstone":   { "model": "treeores:redstone_log_side", "y": 90 },
+        "axis=none,variant=redstone":   { "model": "treeores:redstone_log"},
+        "axis=y,variant=coal":   { "model": "treeores:coal_log"},
+        "axis=z,variant=coal":   { "model": "treeores:coal_log_side"},
+        "axis=x,variant=coal":   { "model": "treeores:coal_log_side", "y": 90 },
+        "axis=none,variant=coal":   { "model": "treeores:coal_log"}
+    }
+}

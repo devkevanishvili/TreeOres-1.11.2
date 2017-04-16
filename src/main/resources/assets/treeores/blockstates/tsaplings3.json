@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "stage=0,type=glowstone":  { "model": "treeores:glowstone_sapling" },
+        "stage=1,type=glowstone":  { "model": "treeores:glowstone_sapling" },
+
+        "stage=0,type=quartz":  { "model": "treeores:quartz_sapling" },
+        "stage=1,type=quartz":  { "model": "treeores:quartz_sapling" },
+
+        "stage=0,type=xp":  { "model": "treeores:xp_sapling" },
+        "stage=1,type=xp":  { "model": "treeores:xp_sapling" }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "stage=0,type=diamond":  { "model": "treeores:diamond_sapling" },
+        "stage=1,type=diamond":  { "model": "treeores:diamond_sapling" },
+
+        "stage=0,type=emerald":  { "model": "treeores:emerald_sapling" },
+        "stage=1,type=emerald":  { "model": "treeores:emerald_sapling" },
+
+        "stage=0,type=lapis":  { "model": "treeores:lapis_sapling" },
+        "stage=1,type=lapis":  { "model": "treeores:lapis_sapling" },
+
+        "stage=0,type=obsidian": { "model": "treeores:obsidian_sapling" },
+        "stage=1,type=obsidian": { "model": "treeores:obsidian_sapling" }
+    }
+}

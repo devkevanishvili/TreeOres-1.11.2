@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "check_decay=false,decayable=true,variant=glowstone":  { "model": "treeores:glowstone_leaf"},
+        "check_decay=false,decayable=false,variant=glowstone":   { "model": "treeores:glowstone_leaf"},
+        "check_decay=true,decayable=true,variant=glowstone":   { "model": "treeores:glowstone_leaf"},
+        "check_decay=true,decayable=false,variant=glowstone":   { "model": "treeores:glowstone_leaf"},
+        
+        "check_decay=false,decayable=true,variant=quartz":  { "model": "treeores:quartz_leaf"},
+        "check_decay=false,decayable=false,variant=quartz":   { "model": "treeores:quartz_leaf"},
+        "check_decay=true,decayable=true,variant=quartz":   { "model": "treeores:quartz_leaf"},
+        "check_decay=true,decayable=false,variant=quartz":   { "model": "treeores:quartz_leaf"},
+       
+        "check_decay=false,decayable=true,variant=xp":  { "model": "treeores:xp_leaf"},
+        "check_decay=false,decayable=false,variant=xp":   { "model": "treeores:xp_leaf"},
+        "check_decay=true,decayable=true,variant=xp":   { "model": "treeores:xp_leaf"},
+        "check_decay=true,decayable=false,variant=xp":   { "model": "treeores:xp_leaf"}
+
+    }
+}
