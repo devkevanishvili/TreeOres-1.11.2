@@ -1,6 +1,6 @@
 package com.dkeva.treeores.blocks;
 
-import com.dkeva.treeores.enums.TV2;
+import com.dkeva.treeores.enums.TV3;
 import com.google.common.base.Predicate;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
@@ -31,28 +31,43 @@ import java.util.Random;
 /**
  * Created by nefelibata on 4/15/17.
  */
-public class BlockTLeaves2 extends BlockLeaves {
-    public static final PropertyEnum<TV2> VARIANT = PropertyEnum.<TV2>create("variant", TV2.class, new Predicate<TV2>() {
-        public boolean apply(@Nullable TV2 enumType) {
-            return enumType.getMetadata() < 4;
+public class BlockTBLeaves3 extends BlockLeaves {
+    public static final PropertyEnum<TV3> VARIANT = PropertyEnum.<TV3>create("variant", TV3.class, new Predicate<TV3>() {
+        public boolean apply(@Nullable TV3 enumType) {
+            return enumType.getMetadata() < 3;
         }
     });
 
-    public BlockTLeaves2() {
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, TV2.DIAMOND).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
-    }
-
-
-    /**
-     * Get the Item that this Block should drop when harvested.
-     */
-    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(TBlocks.TSaplings2);
+    public BlockTBLeaves3() {
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, TV3.GLOWSTONE).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
     }
 
     @SideOnly(Side.CLIENT)
     public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
         return true;
+    }
+
+    /**
+     * Get the Item that this Block should drop when harvested.
+     */
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(TBlocks.TBSaplings3);
+    }
+
+
+    protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance) {
+        if (state.getValue(VARIANT) == TV3.GLOWSTONE && worldIn.rand.nextInt(chance) == 0) {
+            spawnAsEntity(worldIn, pos, new ItemStack(Items.GLOWSTONE_DUST));
+        } else if (state.getValue(VARIANT) == TV3.QUARTZ && worldIn.rand.nextInt(chance) == 0) {
+            spawnAsEntity(worldIn, pos, new ItemStack(Items.QUARTZ));
+        } else if (state.getValue(VARIANT) == TV3.XP && worldIn.rand.nextInt(chance) == 0) {
+            spawnAsEntity(worldIn, pos, new ItemStack(Items.EXPERIENCE_BOTTLE));
+        }
+    }
+
+    //TODO: How does this work?
+    protected int getSaplingDropChance(IBlockState state) {
+        return 40;
     }
 
     @SideOnly(Side.CLIENT)
@@ -64,37 +79,18 @@ public class BlockTLeaves2 extends BlockLeaves {
         return false;
     }
 
-    protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance) {
-        if (state.getValue(VARIANT) == TV2.DIAMOND && worldIn.rand.nextInt(chance) == 0) {
-            spawnAsEntity(worldIn, pos, new ItemStack(Items.DIAMOND));
-        } else if (state.getValue(VARIANT) == TV2.EMERALD && worldIn.rand.nextInt(chance) == 0) {
-            spawnAsEntity(worldIn, pos, new ItemStack(Items.EMERALD));
-        } else if (state.getValue(VARIANT) == TV2.LAPIS && worldIn.rand.nextInt(chance) == 0) {
-            spawnAsEntity(worldIn, pos, new ItemStack(Items.DYE, 1, 11));
-        } else if (state.getValue(VARIANT) == TV2.OBSIDIAN && worldIn.rand.nextInt(chance) == 0) {
-            spawnAsEntity(worldIn, pos, new ItemStack(Blocks.OBSIDIAN));
-        }
-    }
-
-    //TODO: How does this work?
-    protected int getSaplingDropChance(IBlockState state) {
-        return 30;
-    }
-
     /**
      * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
      */
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-        list.add(new ItemStack(itemIn, 1, TV2.DIAMOND.getMetadata()));
-        list.add(new ItemStack(itemIn, 1, TV2.EMERALD.getMetadata()));
-        list.add(new ItemStack(itemIn, 1, TV2.LAPIS.getMetadata()));
-        list.add(new ItemStack(itemIn, 1, TV2.OBSIDIAN.getMetadata()));
+        list.add(new ItemStack(itemIn, 1, TV3.GLOWSTONE.getMetadata()));
+        list.add(new ItemStack(itemIn, 1, TV3.QUARTZ.getMetadata()));
+        list.add(new ItemStack(itemIn, 1, TV3.XP.getMetadata()));
     }
 
-
     protected ItemStack getSilkTouchDrop(IBlockState state) {
-        return new ItemStack(Item.getItemFromBlock(this), 1, ((TV2) state.getValue(VARIANT)).getMetadata());
+        return new ItemStack(Item.getItemFromBlock(this), 1, ((TV3) state.getValue(VARIANT)).getMetadata());
     }
 
     /**
@@ -109,7 +105,7 @@ public class BlockTLeaves2 extends BlockLeaves {
      */
     public int getMetaFromState(IBlockState state) {
         int i = 0;
-        i = i | ((TV2) state.getValue(VARIANT)).getMetadata();
+        i = i | ((TV3) state.getValue(VARIANT)).getMetadata();
 
         if (!((Boolean) state.getValue(DECAYABLE)).booleanValue()) {
             i |= 4;
@@ -123,8 +119,8 @@ public class BlockTLeaves2 extends BlockLeaves {
     }
 
 
-    public TV2 getWoodTypes(int meta) {
-        return TV2.byMetadata((meta & 3) % 4);
+    public TV3 getWoodTypes(int meta) {
+        return TV3.byMetadata((meta & 3) % 4);
     }
 
     protected BlockStateContainer createBlockState() {
@@ -136,7 +132,7 @@ public class BlockTLeaves2 extends BlockLeaves {
      * returns the metadata of the dropped item based on the old metadata of the block.
      */
     public int damageDropped(IBlockState state) {
-        return ((TV2) state.getValue(VARIANT)).getMetadata();
+        return ((TV3) state.getValue(VARIANT)).getMetadata();
     }
 
     public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack) {

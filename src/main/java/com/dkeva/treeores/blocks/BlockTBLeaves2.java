@@ -31,14 +31,14 @@ import java.util.Random;
 /**
  * Created by nefelibata on 4/15/17.
  */
-public class BlockTLeaves2 extends BlockLeaves {
+public class BlockTBLeaves2 extends BlockLeaves {
     public static final PropertyEnum<TV2> VARIANT = PropertyEnum.<TV2>create("variant", TV2.class, new Predicate<TV2>() {
         public boolean apply(@Nullable TV2 enumType) {
             return enumType.getMetadata() < 4;
         }
     });
 
-    public BlockTLeaves2() {
+    public BlockTBLeaves2() {
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, TV2.DIAMOND).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
     }
 
@@ -47,7 +47,7 @@ public class BlockTLeaves2 extends BlockLeaves {
      * Get the Item that this Block should drop when harvested.
      */
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(TBlocks.TSaplings2);
+        return Item.getItemFromBlock(TBlocks.TBSaplings2);
     }
 
     @SideOnly(Side.CLIENT)
@@ -78,7 +78,7 @@ public class BlockTLeaves2 extends BlockLeaves {
 
     //TODO: How does this work?
     protected int getSaplingDropChance(IBlockState state) {
-        return 30;
+        return 40;
     }
 
     /**

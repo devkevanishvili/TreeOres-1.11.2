@@ -30,12 +30,12 @@ import java.util.Random;
 /**
  * Created by nefelibata on 4/16/17.
  */
-public class BlockTSaplings3 extends BlockBush implements IGrowable {
+public class BlockTBSaplings3 extends BlockBush implements IGrowable {
     public static final PropertyEnum<TV3> TYPE = PropertyEnum.<TV3>create("type", TV3.class);
     public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
     protected static final AxisAlignedBB SAPLING_AABB = new AxisAlignedBB(0.09999999403953552D, 0.0D, 0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
 
-    public BlockTSaplings3() {
+    public BlockTBSaplings3() {
         this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, TV3.GLOWSTONE).withProperty(STAGE, Integer.valueOf(0)));
     }
 
@@ -70,17 +70,17 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
         switch ((TV3) state.getValue(TYPE)) {
             case GLOWSTONE:
                 logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.GLOWSTONE);
-                leafState = TBlocks.TLeaves3.getDefaultState().withProperty(BlockTLeaves3.VARIANT, TV3.GLOWSTONE).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                leafState = TBlocks.TBLeaves3.getDefaultState().withProperty(BlockTBLeaves3.VARIANT, TV3.GLOWSTONE).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
                 worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
                 break;
             case QUARTZ:
                 logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.QUARTZ);
-                leafState = TBlocks.TLeaves3.getDefaultState().withProperty(BlockTLeaves3.VARIANT, TV3.QUARTZ).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                leafState = TBlocks.TBLeaves3.getDefaultState().withProperty(BlockTBLeaves3.VARIANT, TV3.QUARTZ).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
                 worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
                 break;
             case XP:
                 logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.XP);
-                leafState = TBlocks.TLeaves3.getDefaultState().withProperty(BlockTLeaves3.VARIANT, TV3.XP).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                leafState = TBlocks.TBLeaves3.getDefaultState().withProperty(BlockTBLeaves3.VARIANT, TV3.XP).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
                 worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
                 break;
         }

@@ -18,17 +18,15 @@ import javax.annotation.Nullable;
 
 /**
  * Created by nefelibata on 4/13/17.
- *
+ * <p>
  * PS: It is more practical to extend BlockLog, Tried already copying most of the functionality, but it seems easier to just extend it because no log type changing features is in BlockLog
  */
 public class BlockTLogs2 extends BlockLog {
     /**
      * Gets variants based on the enum from TRefs Class. Variants can't be more than 4 (0,1,2,3) Limits.
      */
-    public static final PropertyEnum<TV2> VARIANT = PropertyEnum.<TV2>create("variant", TV2.class, new Predicate<TV2>()
-    {
-        public boolean apply(@Nullable TV2 enumType)
-        {
+    public static final PropertyEnum<TV2> VARIANT = PropertyEnum.<TV2>create("variant", TV2.class, new Predicate<TV2>() {
+        public boolean apply(@Nullable TV2 enumType) {
             return enumType.getMetadata() < 4;
         }
     });
@@ -45,8 +43,7 @@ public class BlockTLogs2 extends BlockLog {
      * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
      */
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
-    {
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
         list.add(new ItemStack(itemIn, 1, TV2.DIAMOND.getMetadata()));
         list.add(new ItemStack(itemIn, 1, TV2.EMERALD.getMetadata()));
         list.add(new ItemStack(itemIn, 1, TV2.LAPIS.getMetadata()));
@@ -56,12 +53,10 @@ public class BlockTLogs2 extends BlockLog {
     /**
      * Convert the given metadata into a BlockState for this Block
      */
-    public IBlockState getStateFromMeta(int meta)
-    {
+    public IBlockState getStateFromMeta(int meta) {
         IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, TV2.byMetadata((meta & 3) % 4));
 
-        switch (meta & 12)
-        {
+        switch (meta & 12) {
             case 0:
                 iblockstate = iblockstate.withProperty(LOG_AXIS, EnumAxis.Y);
                 break;
@@ -82,13 +77,11 @@ public class BlockTLogs2 extends BlockLog {
      * Convert the BlockState into the correct metadata value
      */
     @SuppressWarnings("incomplete-switch")
-    public int getMetaFromState(IBlockState state)
-    {
+    public int getMetaFromState(IBlockState state) {
         int i = 0;
-        i = i | ((TV2)state.getValue(VARIANT)).getMetadata();
+        i = i | ((TV2) state.getValue(VARIANT)).getMetadata();
 
-        switch ((EnumAxis)state.getValue(LOG_AXIS))
-        {
+        switch ((EnumAxis) state.getValue(LOG_AXIS)) {
             case X:
                 i |= 4;
                 break;
@@ -103,31 +96,26 @@ public class BlockTLogs2 extends BlockLog {
     }
 
     /**
-     *
      * Creates block state?
      */
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, new IProperty[] {VARIANT, LOG_AXIS});
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, new IProperty[]{VARIANT, LOG_AXIS});
     }
 
     /**
-     *
      * @param state
      * @return What Drops when mined with silktouch enchantment
      */
-    protected ItemStack getSilkTouchDrop(IBlockState state)
-    {
-        return new ItemStack(Item.getItemFromBlock(this), 1, ((TV2)state.getValue(VARIANT)).getMetadata());
+    protected ItemStack getSilkTouchDrop(IBlockState state) {
+        return new ItemStack(Item.getItemFromBlock(this), 1, ((TV2) state.getValue(VARIANT)).getMetadata());
     }
 
     /**
      * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It
      * returns the metadata of the dropped item based on the old metadata of the block.
      */
-    public int damageDropped(IBlockState state)
-    {
-        return ((TV2)state.getValue(VARIANT)).getMetadata();
+    public int damageDropped(IBlockState state) {
+        return ((TV2) state.getValue(VARIANT)).getMetadata();
     }
 
 }

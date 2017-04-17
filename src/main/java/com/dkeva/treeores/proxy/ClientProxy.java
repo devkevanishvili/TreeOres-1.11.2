@@ -14,7 +14,7 @@ public class ClientProxy implements CommonProxy {
     }
 
     @Override
-    public  void init() {
+    public void init() {
         TItems.registerRenders();
         TBlocks.registerRenders();
         ColorManager.registerColourHandlers();

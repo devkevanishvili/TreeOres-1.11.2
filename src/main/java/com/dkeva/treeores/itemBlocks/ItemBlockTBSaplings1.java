@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by nefelibata on 4/13/17.
  */
-public class ItemBlockTSaplings1 extends ItemBlock {
-    public ItemBlockTSaplings1(Block block) {
+public class ItemBlockTBSaplings1 extends ItemBlock {
+    public ItemBlockTBSaplings1(Block block) {
         super(block);
         setHasSubtypes(true);
     }
@@ -19,7 +19,7 @@ public class ItemBlockTSaplings1 extends ItemBlock {
         if ((i < 0) || (i >= TV1.values().length)) {
             i = 0;
         }
-        return TV1.values()[i] + "_sapling";
+        return TV1.values()[i] + "_boss_sapling";
     }
 
     @Override

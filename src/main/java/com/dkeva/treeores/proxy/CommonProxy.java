@@ -5,6 +5,7 @@ package com.dkeva.treeores.proxy;
  */
 public interface CommonProxy {
 
-     void preInit();
-     void init();
+    void preInit();
+
+    void init();
 }

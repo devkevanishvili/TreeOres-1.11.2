@@ -1,7 +1,7 @@
 package com.dkeva.treeores.blocks;
 
-import com.dkeva.treeores.enums.TV3;
-import com.dkeva.treeores.worldGen.WorldGenTreeOres3;
+import com.dkeva.treeores.enums.TV2;
+import com.dkeva.treeores.worldGen.WorldGenTreeOres2;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.IGrowable;
@@ -30,13 +30,13 @@ import java.util.Random;
 /**
  * Created by nefelibata on 4/16/17.
  */
-public class BlockTSaplings3 extends BlockBush implements IGrowable {
-    public static final PropertyEnum<TV3> TYPE = PropertyEnum.<TV3>create("type", TV3.class);
+public class BlockTBSaplings2 extends BlockBush implements IGrowable {
+    public static final PropertyEnum<TV2> TYPE = PropertyEnum.<TV2>create("type", TV2.class);
     public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
     protected static final AxisAlignedBB SAPLING_AABB = new AxisAlignedBB(0.09999999403953552D, 0.0D, 0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
 
-    public BlockTSaplings3() {
-        this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, TV3.GLOWSTONE).withProperty(STAGE, Integer.valueOf(0)));
+    public BlockTBSaplings2() {
+        this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, TV2.DIAMOND).withProperty(STAGE, Integer.valueOf(0)));
     }
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
@@ -47,7 +47,7 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
      * Gets the localized name of this block. Used for the statistics page. Is this needed ?
      */
     public String getLocalizedName() {
-        return I18n.translateToLocal(this.getUnlocalizedName() + "." + TV3.GLOWSTONE.getUnlocalizedName() + ".name");
+        return I18n.translateToLocal(this.getUnlocalizedName() + "." + TV2.DIAMOND.getUnlocalizedName() + ".name");
     }
 
     public void grow(World worldIn, BlockPos pos, IBlockState state, Random rand) {
@@ -67,21 +67,26 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
         IBlockState logState;
         IBlockState leafState;
 
-        switch ((TV3) state.getValue(TYPE)) {
-            case GLOWSTONE:
-                logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.GLOWSTONE);
-                leafState = TBlocks.TLeaves3.getDefaultState().withProperty(BlockTLeaves3.VARIANT, TV3.GLOWSTONE).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-                worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
+        switch ((TV2) state.getValue(TYPE)) {
+            case DIAMOND:
+                logState = TBlocks.TLogs2.getDefaultState().withProperty(BlockTLogs2.VARIANT, TV2.DIAMOND);
+                leafState = TBlocks.TBLeaves2.getDefaultState().withProperty(BlockTBLeaves2.VARIANT, TV2.DIAMOND).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                worldgenerator = new WorldGenTreeOres2(true, 15 + rand.nextInt(7), logState, leafState, false);
                 break;
-            case QUARTZ:
-                logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.QUARTZ);
-                leafState = TBlocks.TLeaves3.getDefaultState().withProperty(BlockTLeaves3.VARIANT, TV3.QUARTZ).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-                worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
+            case EMERALD:
+                logState = TBlocks.TLogs2.getDefaultState().withProperty(BlockTLogs2.VARIANT, TV2.EMERALD);
+                leafState = TBlocks.TBLeaves2.getDefaultState().withProperty(BlockTBLeaves2.VARIANT, TV2.EMERALD).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                worldgenerator = new WorldGenTreeOres2(true, 15 + rand.nextInt(7), logState, leafState, false);
                 break;
-            case XP:
-                logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.XP);
-                leafState = TBlocks.TLeaves3.getDefaultState().withProperty(BlockTLeaves3.VARIANT, TV3.XP).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-                worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
+            case LAPIS:
+                logState = TBlocks.TLogs2.getDefaultState().withProperty(BlockTLogs2.VARIANT, TV2.LAPIS);
+                leafState = TBlocks.TBLeaves2.getDefaultState().withProperty(BlockTBLeaves2.VARIANT, TV2.LAPIS).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                worldgenerator = new WorldGenTreeOres2(true, 15 + rand.nextInt(7), logState, leafState, false);
+                break;
+            case OBSIDIAN:
+                logState = TBlocks.TLogs2.getDefaultState().withProperty(BlockTLogs2.VARIANT, TV2.OBSIDIAN);
+                leafState = TBlocks.TBLeaves2.getDefaultState().withProperty(BlockTBLeaves2.VARIANT, TV2.OBSIDIAN).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+                worldgenerator = new WorldGenTreeOres2(true, 15 + rand.nextInt(7), logState, leafState, false);
                 break;
         }
 
@@ -108,14 +113,14 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
         }
     }
 
-    private boolean isTwoByTwoOfType(World worldIn, BlockPos pos, int p_181624_3_, int p_181624_4_, TV3 type) {
+    private boolean isTwoByTwoOfType(World worldIn, BlockPos pos, int p_181624_3_, int p_181624_4_, TV2 type) {
         return this.isTypeAt(worldIn, pos.add(p_181624_3_, 0, p_181624_4_), type) && this.isTypeAt(worldIn, pos.add(p_181624_3_ + 1, 0, p_181624_4_), type) && this.isTypeAt(worldIn, pos.add(p_181624_3_, 0, p_181624_4_ + 1), type) && this.isTypeAt(worldIn, pos.add(p_181624_3_ + 1, 0, p_181624_4_ + 1), type);
     }
 
     /**
      * Check whether the given BlockPos has a Sapling of the given type
      */
-    public boolean isTypeAt(World worldIn, BlockPos pos, TV3 type) {
+    public boolean isTypeAt(World worldIn, BlockPos pos, TV2 type) {
         IBlockState iblockstate = worldIn.getBlockState(pos);
         return iblockstate.getBlock() == this && iblockstate.getValue(TYPE) == type;
     }
@@ -125,7 +130,7 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
      * returns the metadata of the dropped item based on the old metadata of the block.
      */
     public int damageDropped(IBlockState state) {
-        return ((TV3) state.getValue(TYPE)).getMetadata();
+        return ((TV2) state.getValue(TYPE)).getMetadata();
     }
 
     /**
@@ -133,8 +138,8 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
      */
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-        for (TV3 TV3$enumtype : TV3.values()) {
-            list.add(new ItemStack(itemIn, 1, TV3$enumtype.getMetadata()));
+        for (TV2 TV2$enumtype : TV2.values()) {
+            list.add(new ItemStack(itemIn, 1, TV2$enumtype.getMetadata()));
         }
     }
 
@@ -159,7 +164,7 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
      * Convert the given metadata into a BlockState for this Block
      */
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(TYPE, TV3.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
+        return this.getDefaultState().withProperty(TYPE, TV2.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
     }
 
     /**
@@ -167,7 +172,7 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
      */
     public int getMetaFromState(IBlockState state) {
         int i = 0;
-        i = i | ((TV3) state.getValue(TYPE)).getMetadata();
+        i = i | ((TV2) state.getValue(TYPE)).getMetadata();
         i = i | ((Integer) state.getValue(STAGE)).intValue() << 3;
         return i;
     }

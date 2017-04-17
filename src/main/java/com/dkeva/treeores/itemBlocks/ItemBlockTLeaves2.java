@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by nefelibata on 4/13/17.
  */
-public class ItemBlockTLeaves2 extends ItemBlock{
+public class ItemBlockTLeaves2 extends ItemBlock {
     public ItemBlockTLeaves2(Block block) {
         super(block);
         setHasSubtypes(true);
@@ -23,7 +23,7 @@ public class ItemBlockTLeaves2 extends ItemBlock{
     }
 
     @Override
-    public int getMetadata( int meta){
+    public int getMetadata(int meta) {
         return meta;
     }
 }

@@ -1,9 +1,5 @@
 package com.dkeva.treeores;
 
-import net.minecraft.util.IStringSerializable;
-
-import java.awt.*;
-
 /**
  * Created by nefelibata on 4/13/17.
  */

@@ -25,7 +25,7 @@ public class TreeOres {
     public static CreativeTabs CTab;
 
     @Mod.EventHandler
-    private void preInit(FMLPreInitializationEvent e){
+    private void preInit(FMLPreInitializationEvent e) {
 
         CTab = new CreativeTabs("toTab") {
             @Override
@@ -37,12 +37,14 @@ public class TreeOres {
         TBlocks.init();
         proxy.preInit();
     }
+
     @Mod.EventHandler
-    private void init(FMLInitializationEvent e){
-    proxy.init();
+    private void init(FMLInitializationEvent e) {
+        proxy.init();
     }
+
     @Mod.EventHandler
-    private void postInit(FMLPostInitializationEvent e){
+    private void postInit(FMLPostInitializationEvent e) {
 
     }
 }

@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by nefelibata on 4/13/17.
  */
-public class ItemBlockTLogs3 extends ItemBlock{
+public class ItemBlockTLogs3 extends ItemBlock {
     public ItemBlockTLogs3(Block block) {
         super(block);
         setHasSubtypes(true);
@@ -23,7 +23,7 @@ public class ItemBlockTLogs3 extends ItemBlock{
     }
 
     @Override
-    public int getMetadata( int meta){
+    public int getMetadata(int meta) {
         return meta;
     }
 }
