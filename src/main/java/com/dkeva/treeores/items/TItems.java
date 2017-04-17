@@ -16,23 +16,37 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class TItems {
 
     public static Item Transformers;
+    public static Item TChops1;
+    public static Item TChops2;
+    public static Item TChops3;
 
     public static void init() {
-        Transformers = new ItemTransformers().setRegistryName("transformers").setUnlocalizedName("transformer").setCreativeTab(TreeOres.CTab);
-
+        Transformers = new ItemTransformers().setRegistryName("transformers").setUnlocalizedName("transformers").setCreativeTab(TreeOres.CTab);
+        TChops1 = new ItemTChops1().setRegistryName("tchops1").setUnlocalizedName("tchops").setCreativeTab(TreeOres.CTab);
+        TChops2 = new ItemTChops2().setRegistryName("tchops2").setUnlocalizedName("tchops").setCreativeTab(TreeOres.CTab);
+        TChops3 = new ItemTChops3().setRegistryName("tchops3").setUnlocalizedName("tchops").setCreativeTab(TreeOres.CTab);
         register();
     }
 
     private static void register() {
         GameRegistry.register(Transformers);
+        GameRegistry.register(TChops1);
+        GameRegistry.register(TChops2);
+        GameRegistry.register(TChops3);
     }
 
     public static void registerRenders() {
         registerRenderers(Transformers, 3);
+        registerRenderers(TChops1, 4);
+        registerRenderers(TChops2, 4);
+        registerRenderers(TChops3, 3);
     }
 
     public static void registerVariants() {
         registerVariant(Transformers, 3);
+        registerVariant(TChops1, 4);
+        registerVariant(TChops2, 4);
+        registerVariant(TChops3, 3);
     }
 
     public static void registerRenderers(Item item, int meta) {
