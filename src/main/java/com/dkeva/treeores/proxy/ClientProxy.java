@@ -11,6 +11,7 @@ public class ClientProxy implements CommonProxy {
     @Override
     public void preInit() {
         TBlocks.registerVariants();
+        TItems.registerVariants();
     }
 
     @Override
