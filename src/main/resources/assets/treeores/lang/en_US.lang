@@ -86,17 +86,17 @@ item.tchops_xp.name=Xp Log Chop
 item.tchops_glowstone.name=Glowstone Log Chop
 item.tchops_quartz.name=Quartz Log Chop
 
-entity.treeores.IronTreeBoss.name=Iron Tree Boss
-entity.treeores.GoldTreeBoss.name=Gold Tree Boss
-entity.treeores.CoalTreeBoss.name=Coal Tree Boss
-entity.treeores.RedstoneTreeBoss.name=Redstone Tree Boss
-entity.treeores.EmeraldTreeBoss.name=Emerald Tree Boss
-entity.treeores.DiamondTreeBoss.name=Diamond Tree Boss
-entity.treeores.LapisTreeBoss.name=Lapis Tree Boss
-entity.treeores.ObsidianTreeBoss.name=Obsidian Tree Boss
-entity.treeores.XpTreeBoss.name=Xp Tree Boss
-entity.treeores.GlowstoneTreeBoss.name=Glowstone Tree Boss
-entity.treeores.QuartzTreeBoss.name=Quartz Tree Boss
+entity.IronTreeBoss.name=Iron Tree Boss
+entity.GoldTreeBoss.name=Gold Tree Boss
+entity.CoalTreeBoss.name=Coal Tree Boss
+entity.RedstoneTreeBoss.name=Redstone Tree Boss
+entity.EmeraldTreeBoss.name=Emerald Tree Boss
+entity.DiamondTreeBoss.name=Diamond Tree Boss
+entity.LapisTreeBoss.name=Lapis Tree Boss
+entity.ObsidianTreeBoss.name=Obsidian Tree Boss
+entity.XpTreeBoss.name=Xp Tree Boss
+entity.GlowstoneTreeBoss.name=Glowstone Tree Boss
+entity.QuartzTreeBoss.name=Quartz Tree Boss
 
 itemGroup.toTab=TreeOres Tab
 
