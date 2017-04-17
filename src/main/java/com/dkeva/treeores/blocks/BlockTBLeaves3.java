@@ -67,7 +67,7 @@ public class BlockTBLeaves3 extends BlockLeaves {
 
     //TODO: How does this work?
     protected int getSaplingDropChance(IBlockState state) {
-        return 40;
+        return 35;
     }
 
     @SideOnly(Side.CLIENT)
