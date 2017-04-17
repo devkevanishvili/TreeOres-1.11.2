@@ -85,7 +85,7 @@ public class ItemTransformers extends Item {
      */
     public String getUnlocalizedName(ItemStack stack) {
         int i = stack.getMetadata();
-        return super.getUnlocalizedName() + "." + EnumTransformers.byTransformerDamage(i).getUnlocalizedName();
+        return super.getUnlocalizedName() + "_" + EnumTransformers.byTransformerDamage(i).getUnlocalizedName();
     }
 
     /**
