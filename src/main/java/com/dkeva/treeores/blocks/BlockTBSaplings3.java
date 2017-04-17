@@ -71,17 +71,17 @@ public class BlockTBSaplings3 extends BlockBush implements IGrowable {
             case GLOWSTONE:
                 logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.GLOWSTONE);
                 leafState = TBlocks.TBLeaves3.getDefaultState().withProperty(BlockTBLeaves3.VARIANT, TV3.GLOWSTONE).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-                worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
+                worldgenerator = new WorldGenTreeOres3(true, 15 + rand.nextInt(7), logState, leafState, false);
                 break;
             case QUARTZ:
                 logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.QUARTZ);
                 leafState = TBlocks.TBLeaves3.getDefaultState().withProperty(BlockTBLeaves3.VARIANT, TV3.QUARTZ).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-                worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
+                worldgenerator = new WorldGenTreeOres3(true, 15 + rand.nextInt(7), logState, leafState, false);
                 break;
             case XP:
                 logState = TBlocks.TLogs3.getDefaultState().withProperty(BlockTLogs3.VARIANT, TV3.XP);
                 leafState = TBlocks.TBLeaves3.getDefaultState().withProperty(BlockTBLeaves3.VARIANT, TV3.XP).withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-                worldgenerator = new WorldGenTreeOres3(true, 4 + rand.nextInt(5), logState, leafState, false);
+                worldgenerator = new WorldGenTreeOres3(true, 15 + rand.nextInt(7), logState, leafState, false);
                 break;
         }
 
