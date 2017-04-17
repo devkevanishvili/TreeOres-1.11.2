@@ -74,17 +74,17 @@ item.bossspawners3_quartz.name=Quartz Boss Spawner
 item.bossspawnerparts_broken.name=Broken Spawner Frame
 item.bossspawnerparts_final.name=Spawner Frame
 
-item.treechops1_iron.name=Iron Log Chop
-item.treechops1_gold.name=Gold Log Chop
-item.treechops1_coal.name=Coal Log Chop
-item.treechops1_redstone.name=Redstone Log Chop
-item.treechops2_emerald.name=Emerald Log Chop
-item.treechops2_diamond.name=Diamond Log Chop
-item.treechops2_lapis.name=Lapis Log Chop
-item.treechops2_obsidian.name=Obsidian Log Chop
-item.treechops3_xp.name=Xp Log Chop
-item.treechops3_glowstone.name=Glowstone Log Chop
-item.treechops3_quartz.name=Quartz Log Chop
+item.tchops_iron.name=Iron Log Chop
+item.tchops_gold.name=Gold Log Chop
+item.tchops_coal.name=Coal Log Chop
+item.tchops_redstone.name=Redstone Log Chop
+item.tchops_emerald.name=Emerald Log Chop
+item.tchops_diamond.name=Diamond Log Chop
+item.tchops_lapis.name=Lapis Log Chop
+item.tchops_obsidian.name=Obsidian Log Chop
+item.tchops_xp.name=Xp Log Chop
+item.tchops_glowstone.name=Glowstone Log Chop
+item.tchops_quartz.name=Quartz Log Chop
 
 entity.treeores.IronTreeBoss.name=Iron Tree Boss
 entity.treeores.GoldTreeBoss.name=Gold Tree Boss
@@ -98,6 +98,6 @@ entity.treeores.XpTreeBoss.name=Xp Tree Boss
 entity.treeores.GlowstoneTreeBoss.name=Glowstone Tree Boss
 entity.treeores.QuartzTreeBoss.name=Quartz Tree Boss
 
-itemGroup.treeOresTab=TreeOres Tab
+itemGroup.toTab=TreeOres Tab
 
 
