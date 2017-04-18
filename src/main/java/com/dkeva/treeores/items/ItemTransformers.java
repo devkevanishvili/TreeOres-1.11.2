@@ -77,7 +77,9 @@ public class ItemTransformers extends Item {
     public ItemTransformers() {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
+        this.setContainerItem(this);
     }
+
 
     /**
      * Returns the unlocalized name of this item. This version accepts an ItemStack so different stacks can have
