@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -124,6 +125,16 @@ public class TBlocks {
         GameRegistry.register(ITBSaplings2.setRegistryName(TBSaplings2.getRegistryName()));
         GameRegistry.register(TBSaplings3);
         GameRegistry.register(ITBSaplings3.setRegistryName(TBSaplings3.getRegistryName()));
+
+        Blocks.FIRE.setFireInfo(TLogs1, 5, 5);
+        Blocks.FIRE.setFireInfo(TLogs2, 5, 5);
+        Blocks.FIRE.setFireInfo(TLogs3, 5, 5);
+        Blocks.FIRE.setFireInfo(TLeaves1, 30, 60);
+        Blocks.FIRE.setFireInfo(TLeaves2, 30, 60);
+        Blocks.FIRE.setFireInfo(TLeaves3, 30, 60);
+        Blocks.FIRE.setFireInfo(TBLeaves1, 30, 60);
+        Blocks.FIRE.setFireInfo(TBLeaves2, 30, 60);
+        Blocks.FIRE.setFireInfo(TBLeaves3, 30, 60);
     }
 
     public static void registerRenders() {
