@@ -1,0 +1,12 @@
+{
+  //URL to display in ModList GUI when an update is avalible
+  "homepage": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2242983",
+  "promos": {
+    "1.11.2-latest": "1.0",
+    "1.11.2-recomended": "1.0"
+  },
+  "1.11.2": {
+    // The changelog will be a ordered list of all entries in this this whos key is >= CURRENT_VERSION && <= TARGET version
+    "1.0": "Initial Update"
+  }
+}
