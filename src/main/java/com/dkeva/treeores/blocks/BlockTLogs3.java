@@ -1,6 +1,8 @@
 package com.dkeva.treeores.blocks;
 
+import com.dkeva.treeores.TRefs;
 import com.dkeva.treeores.enums.TV3;
+import com.dkeva.treeores.items.TItems;
 import com.google.common.base.Predicate;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.IProperty;
@@ -15,6 +17,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
+import java.util.Random;
 
 /**
  * Created by nefelibata on 4/13/17.
@@ -109,6 +112,13 @@ public class BlockTLogs3 extends BlockLog {
         return new ItemStack(Item.getItemFromBlock(this), 1, ((TV3) state.getValue(VARIANT)).getMetadata());
     }
 
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        if (TRefs.EnableChops) {
+            return TItems.TChops3;
+        } else {
+            return Item.getItemFromBlock(this);
+        }
+    }
     /**
      * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It
      * returns the metadata of the dropped item based on the old metadata of the block.

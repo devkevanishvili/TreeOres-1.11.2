@@ -1,5 +1,6 @@
 package com.dkeva.treeores.blocks;
 
+import com.dkeva.treeores.TRefs;
 import com.dkeva.treeores.enums.TV3;
 import com.dkeva.treeores.worldGen.WorldGenTreeOres3;
 import net.minecraft.block.BlockBush;
@@ -148,7 +149,11 @@ public class BlockTSaplings3 extends BlockBush implements IGrowable {
 
     //TODO: Can? Config file
     public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-        return (double) worldIn.rand.nextFloat() < 0.45D;
+        if (TRefs.EnableBonemeal) {
+            return (double) worldIn.rand.nextFloat() < 0.45D;
+        } else {
+            return false;
+        }
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {

@@ -1,6 +1,8 @@
 package com.dkeva.treeores.blocks;
 
+import com.dkeva.treeores.TRefs;
 import com.dkeva.treeores.enums.TV1;
+import com.dkeva.treeores.items.TItems;
 import com.google.common.base.Predicate;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.IProperty;
@@ -15,6 +17,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
+import java.util.Random;
 
 /**
  * Created by nefelibata on 4/13/17.
@@ -102,6 +105,13 @@ public class BlockTLogs1 extends BlockLog {
         return new BlockStateContainer(this, new IProperty[]{VARIANT, LOG_AXIS});
     }
 
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        if (TRefs.EnableChops) {
+            return TItems.TChops1;
+        } else {
+            return Item.getItemFromBlock(this);
+        }
+    }
     /**
      * @param state
      * @return What Drops when mined with silktouch enchantment

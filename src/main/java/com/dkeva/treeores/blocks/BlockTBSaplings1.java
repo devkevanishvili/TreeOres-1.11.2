@@ -1,5 +1,6 @@
 package com.dkeva.treeores.blocks;
 
+import com.dkeva.treeores.TRefs;
 import com.dkeva.treeores.enums.TV1;
 import com.dkeva.treeores.worldGen.WorldGenTreeOres1;
 import net.minecraft.block.BlockBush;
@@ -151,9 +152,12 @@ public class BlockTBSaplings1 extends BlockBush implements IGrowable {
     }
 
 
-    //TODO: Can? Config file
     public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-        return (double) worldIn.rand.nextFloat() < 0.45D;
+        if (TRefs.EnableBonemealBossTrees) {
+            return (double) worldIn.rand.nextFloat() < 0.45D;
+        } else {
+            return false;
+        }
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
