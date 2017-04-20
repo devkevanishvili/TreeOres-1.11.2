@@ -9,9 +9,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 enum EnumTransformers implements IStringSerializable {
-    NORMAL(0, 2, "normal"),
-    REINFORCED(1, 1, "reinforced"),
-    NETHER(2, 0, "nether");
+    REINFORCED(0, 2, "reinforced"),
+    NETHER(1, 1, "nether"),
+    NORMAL(2, 0, "normal");
     private static final EnumTransformers[] META_LOOKUP = new EnumTransformers[values().length];
     private static final EnumTransformers[] TRANSFORMER_DMG_LOOKUP = new EnumTransformers[values().length];
 
