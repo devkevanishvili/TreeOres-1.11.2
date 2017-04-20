@@ -112,6 +112,20 @@ public class BlockTLogs3 extends BlockLog {
         return new ItemStack(Item.getItemFromBlock(this), 1, ((TV3) state.getValue(VARIANT)).getMetadata());
     }
 
+    public int quantityDropped(Random random) {
+        if (TRefs.EnableChops) {
+            return 2 + random.nextInt(2);
+        } else {
+            return 1;
+        }
+    }
+
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        if (TRefs.EnableChops) {
+            return quantityDropped(random) + random.nextInt(fortune + 1);
+        }
+        return quantityDropped(random);
+    }
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
         if (TRefs.EnableChops) {
             return TItems.TChops3;

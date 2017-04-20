@@ -121,6 +121,21 @@ public class BlockTLogs2 extends BlockLog {
         }
     }
 
+    public int quantityDropped(Random random) {
+        if (TRefs.EnableChops) {
+            return 2 + random.nextInt(2);
+        } else {
+            return 1;
+        }
+    }
+
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        if (TRefs.EnableChops) {
+            return quantityDropped(random) + random.nextInt(fortune + 1);
+        }
+        return quantityDropped(random);
+    }
+
     /**
      * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It
      * returns the metadata of the dropped item based on the old metadata of the block.

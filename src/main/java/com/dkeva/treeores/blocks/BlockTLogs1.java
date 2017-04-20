@@ -112,6 +112,21 @@ public class BlockTLogs1 extends BlockLog {
             return Item.getItemFromBlock(this);
         }
     }
+
+    public int quantityDropped(Random random) {
+        if (TRefs.EnableChops) {
+            return 2 + random.nextInt(2);
+        } else {
+            return 1;
+        }
+    }
+
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        if (TRefs.EnableChops) {
+            return quantityDropped(random) + random.nextInt(fortune + 1);
+        }
+        return quantityDropped(random);
+    }
     /**
      * @param state
      * @return What Drops when mined with silktouch enchantment
