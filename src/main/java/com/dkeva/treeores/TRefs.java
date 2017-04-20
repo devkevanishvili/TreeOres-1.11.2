@@ -9,7 +9,7 @@ public class TRefs {
 
 
     public static final String MODID = "treeores";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.0"; //TODO: CHANGE EVERY UPDATE
     public static final String NAME = "TreeOres Mod";
     public static final String UPDATE_LINK = "https://github.com/devkevanishvili/TreeOres-1.11.2/blob/master/src/main/resources/update.json";
 
