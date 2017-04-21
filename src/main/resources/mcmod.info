@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "treeores",
+  "name": "TreeOres Mod",
+  "description": "Tired of mining? Try chopping",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "url": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2242983",
+  "updateUrl": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2242983",
+  "authorList": ["RedkillerKing","BrsGamer","Nefelibata","Dima Kevanishvili"],
+  "credits": "All the authors are really one man... ",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
